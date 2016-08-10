@@ -1,0 +1,25 @@
+# character input
+# Create a program that asks the user to enter their name and their age. Print out a message addressed to them that tells them the year that they will 
+# turn 100 years old.
+
+# Extras:
+
+# Add on to the previous program by asking the user for another number and printing out that many copies of the previous message. (Hint: order of 
+# operations exists in Python)
+# Print out that many copies of the previous message on separate lines. (Hint: the string "\n is the same as pressing the ENTER button)
+
+from datetime import datetime # so that we will be able to call the current year
+
+name = input("What is your name?") # for some reason having to input my name in quotes
+age = input("What is your age?")
+
+current_year = datetime.now().year # what year is it currently
+year_born = current_year - age
+year_hundred = year_born + 100
+
+print name, "you will turn 100 in", year_hundred, "."
+
+number = input("Tell me a random number.")
+# number = int(number)
+for i in range(number):
+    print name, "you will turn 100 in", year_hundred, "."
