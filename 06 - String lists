@@ -1,0 +1,8 @@
+# Ask the user for a string and print out whether this string is a palindrome or not. (A palindrome is a string that reads the same
+# forwards and backwards.)
+
+def isPalindrome(test_string):
+	return test_string == test_string[::-1]
+
+print isPalindrome("poop") # prints True
+print isPalindrome("tacocats") # prints False
