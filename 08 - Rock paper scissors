@@ -1,0 +1,36 @@
+# Make a two-player Rock-Paper-Scissors game. (Hint: Ask for player plays (using input), compare them, print out a message of
+# congratulations to the winner, and ask if the players want to start a new game)
+
+# Remember the rules:
+
+# Rock beats scissors
+# Scissors beats paper
+# Paper beats rock
+
+input1 = input("What is your play, player1? Please choose rock, paper, or scissors.")
+input2 = input("What is your play, player2? Please choose rock, paper, or scissors")
+
+def declare_winner(player1, player2):
+	if player1 == player2:
+		return("It's a tie!")
+	elif player1 == "rock":
+		if player2 == "scissors":
+			return("Player1 wins!")
+		else:
+			return("Player2 wins!")
+	elif player1 == "scissors":
+		if player2 == "rock":
+			return("Player2 wins!")
+		else:
+			return("Player1 wins!")
+	elif player1 == "paper":
+		if player2 == "rock":
+			return("Player1 wins!")
+		else:
+			return("Player2 wins!")
+	else:
+		return("Invalid input!  You did not enter rock, paper, or scissors!")
+
+print declare_winner(input1, input2)
+
+# Having to input rock, paper, and scissors in quotes.  Still not sure why that is happenning.
