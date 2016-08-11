@@ -1,0 +1,17 @@
+# Write a program that asks the user how many Fibonnaci numbers to generate and then generates them. Take this
+# opportunity to think about how you can use functions. Make sure to ask the user to enter the number of numbers in
+# the sequence to generate.(Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the
+# sequence is the sum of the previous two numbers in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8,
+# 13, …)
+
+import math
+
+user_num = input("How many numbers would you like to see?")
+
+def fib(n):
+	for x in range(n):
+		print int((1 / math.sqrt(5)) * (((1 + math.sqrt(5))/2)**x - ((1 - math.sqrt(5))/2)**x)),
+		# make the numbers integers instead of floating points
+		# use the comma so the numbers are all printed on the same line
+
+fib(user_num)
