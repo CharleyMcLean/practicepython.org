@@ -9,7 +9,8 @@
 from random import randint
 
 generated_num = randint(1,9)
-user_provided_num = raw_input("Please guess a numbe between 1 and 9:")
+user_provided_num = raw_input("Please guess a number between 1 and 9:")
+
 
 # part 1.
 def guess_game(gen_num, user_num):
@@ -22,3 +23,23 @@ def guess_game(gen_num, user_num):
 
 print guess_game(generated_num, user_provided_num)
 
+
+# part 2, including exit and guesses
+the_number = randint(1,9)
+tries = 1
+
+while tries < 9:
+	guess = int(input("Take a guess:"))
+	tries += 1
+	
+	if guess > the_number:
+		print("Lower...")
+	elif guess < the_number:
+		print("Higher...")
+	else:
+		print("You guessed it! The number was", the_number, ".")
+		print("It took you", tries, "tries.")
+		input("Please type 'exit'.")
+		break
+# the above works, but it feels a little sloppy
+# also, printing as follows:  'You guess it! The number was', 4
