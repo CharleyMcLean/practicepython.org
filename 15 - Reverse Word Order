@@ -1,0 +1,20 @@
+# Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to
+# the user the same string, except with the words in backwards order. For example, say I type the string:
+
+# My name is Michele
+
+# Then I would see the string:
+
+# Michele is name My
+
+# shown back to me.
+
+orig_str = "Hello my name is Charley"
+
+def reverse(string):
+	orig_list = orig_str.split() # convert the string of words into a list of words
+	rev_list = orig_list[::-1] # reverse the list
+	for x in rev_list: # print out the elements of the reversed list
+		print x,
+
+reverse(orig_str) # prints Charley is name my Hello
